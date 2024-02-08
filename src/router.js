@@ -38,7 +38,7 @@ export const router = createRouter({
       component: ErrorPage,
       meta: { layout: ErrorLayout },
     },
-  ].map((route) => {
+  ].map((router) => {
     if (!route.meta?.layout) {
       return {
         ...route,
@@ -48,6 +48,6 @@ export const router = createRouter({
       };
     }
 
-    return route;
+    return router;
   }),
 });
