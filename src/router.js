@@ -39,7 +39,7 @@ export const router = createRouter({
       meta: { layout: ErrorLayout },
     },
   ].map((router) => {
-    if (!route.meta?.layout) {
+    if (!router.meta?.layout) {
       return {
         ...route,
         meta: {
