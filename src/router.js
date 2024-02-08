@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from './page/Home.vue';
 import Blog from './page/Blog.vue';
-import Project from './page/Projecct.vue';
+import Project from './page/Project.vue';
 import BlogDetails from './page/BlogDetails.vue';
 import ErrorPage from './page/ErrorPage.vue';
 
