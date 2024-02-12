@@ -1,12 +1,6 @@
 <template>
-  <!-- BANER -->
-  <section class="main-header">
-    <img class="main-header__baner" src="img/Blog/StartImg.png" alt="baner" />
-    <div class="main-header-title">
-      <h2 class="main-header-title__title">Articles & News</h2>
-      <p class="adressPage">Home / Blog</p>
-    </div>
-  </section>
+  <Baner :img="'img/Blog/StartImg.png'" :title="'Articles & News'" :path="'Home / Blog'" />
+
   <!-- Latest Post -->
   <section class="latestPost">
     <div class="latestPost-content content">
@@ -48,13 +42,14 @@
 </template>
 
 <script>
+import Baner from '@/components/Baner.vue';
 import BlogBlock from '@/components/BlogBlock/BlogBlock.vue';
 import CardProduct from '@/components/CardProduct/CardProduct.vue';
 import BtnNextPage from '@/components/UI/button/BtnNextPage.vue';
 
 export default {
   name: 'Blog',
-  components: { CardProduct, BlogBlock, BtnNextPage },
+  components: { CardProduct, BlogBlock, BtnNextPage, Baner },
   data() {
     return {
       articlesNewsBlogs: [
@@ -107,36 +102,6 @@ export default {
 </script>
 
 <style lang="scss">
-.main-header {
-  position: relative;
-  height: 356px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.main-header__baner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-.main-header-title {
-  position: relative;
-  z-index: 2;
-  padding: 41px 78px;
-  background-color: #fff;
-  border-radius: 37px 37px 0 0;
-  text-align: center;
-}
-.main-header-title__title {
-  @include DMSerifDisplay50;
-}
-.adressPage {
-  @include Jost22;
-}
 /*LATEST POST*/
 
 .latestPost {
