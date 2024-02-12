@@ -7,14 +7,16 @@
           <h3>{{ item.title }}</h3>
           <p>{{ item.path }}</p>
         </div>
-        <Btn />
+        <router-link to="/project_details">
+          <Btn />
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Btn from './UI/button/Btn.vue';
+import Btn from "./UI/button/Btn.vue";
 
 export default {
   props: {
