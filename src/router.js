@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from './page/Home.vue';
 import Blog from './page/Blog.vue';
-import Project from './page/Project.vue';
+import Project from './page/Projecct.vue';
 import BlogDetails from './page/BlogDetails.vue';
 import ErrorPage from './page/ErrorPage.vue';
 
@@ -33,13 +33,18 @@ export const router = createRouter({
       component: BlogDetails,
     },
     {
+      name: 'ProjectDetails',
+      path: '/project_details',
+      component: () => import('./page/ProjectDetails.vue'),
+    },
+    {
       name: 'ErrorPage',
       path: '/:catchAll(.*)',
       component: ErrorPage,
       meta: { layout: ErrorLayout },
     },
-  ].map((router) => {
-    if (!router.meta?.layout) {
+  ].map((route) => {
+    if (!route.meta?.layout) {
       return {
         ...route,
         meta: {
@@ -48,6 +53,6 @@ export const router = createRouter({
       };
     }
 
-    return router;
+    return route;
   }),
 });
