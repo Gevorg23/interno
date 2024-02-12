@@ -1,13 +1,10 @@
 <template>
   <div>
-    <!-- BANER -->
-    <section class="main-header">
-      <img class="main-header__baner" src="img/ProjectPage/StartProject.png" alt="baner" />
-      <div class="main-header-title">
-        <h2 class="main-header-title__title">Our Project</h2>
-        <p class="adressPage">Home / Project</p>
-      </div>
-    </section>
+    <Baner
+      :img="'img/ProjectPage/StartProject.png'"
+      :title="'Our Project'"
+      :path="'Home / Project'"
+    />
     <section class="content project">
       <BtnProject :tags="Object.keys(projects)" v-model:btnText="btnText" />
 
@@ -41,69 +38,70 @@
 </template>
 
 <script>
-import ProjectCards from '@/components/ProjectCards.vue';
-import BtnProject from '@/components/UI/button/BtnProject.vue';
+import Baner from "@/components/Baner.vue";
+import ProjectCards from "@/components/ProjectCards.vue";
+import BtnProject from "@/components/UI/button/BtnProject.vue";
 
 export default {
-  components: { BtnProject, ProjectCards },
+  components: { BtnProject, ProjectCards, Baner },
   data() {
     return {
-      btnText: 'Bed Room',
+      btnText: "Bed Room",
       projects: {
         Bathroom: [],
-        'Bed Room': [
+        "Bed Room": [
           {
-            img: 'img/ProjectPage/BedRoom/img_1.png',
-            title: 'Minimal Bedroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_1.png",
+            title: "Minimal Bedroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_3.png',
-            title: 'Classic Minimal Bedroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_3.png",
+            title: "Classic Minimal Bedroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_5.png',
-            title: 'Minimal Bedroom table',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_5.png",
+            title: "Minimal Bedroom table",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
 
           {
-            img: 'img/ProjectPage/BedRoom/img_7.png',
-            title: 'Modern Medroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_7.png",
+            title: "Modern Medroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_2.png',
-            title: 'Minimal Bedroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_2.png",
+            title: "Minimal Bedroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_4.png',
-            title: 'Modern Bedroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_4.png",
+            title: "Modern Bedroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_6.png',
-            title: 'System Table',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_6.png",
+            title: "System Table",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
           {
-            img: 'img/ProjectPage/BedRoom/img_8.png',
-            title: 'Modern Medroom',
-            path: 'Decor / Artchitecture',
+            img: "img/ProjectPage/BedRoom/img_8.png",
+            title: "Modern Medroom",
+            path: "Decor / Artchitecture",
             favourites: false,
           },
         ],
         Kitchan: [],
-        'Living Area': [],
+        "Living Area": [],
       },
     };
   },
