@@ -14,56 +14,34 @@
   >
     <swiper-slide>
       <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
+        <img src="img/ProjectDetails/swiper/img_01.png" />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
       <div class="swiper-zoom-container">
         <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
       <div class="swiper-zoom-container">
         <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
       </div>
     </swiper-slide>
   </swiper>
 </template>
 <script>
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
-import 'swiper/css/zoom';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css/zoom";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Zoom, Navigation, Pagination } from 'swiper/modules';
+import { Zoom, Navigation, Pagination } from "swiper/modules";
 
 export default {
   components: {
@@ -79,10 +57,22 @@ export default {
 </script>
 <style lang="scss">
 .swiper {
-  width: 800px;
+  width: 100%;
   height: 100%;
 }
+// .swiper-zoom-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
+.swiper-zoom-container > img,
+.swiper-zoom-container > svg,
+.swiper-zoom-container > canvas {
+  width: 100%;
+
+  object-fit: cover;
+}
 .swiper-slide {
   overflow: hidden;
 }
