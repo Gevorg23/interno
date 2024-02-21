@@ -175,7 +175,6 @@ export default {
 <style lang="scss">
 /*MAIN*/
 /*Section Baner*/
-$colorTextCounter: #ff0000;
 
 .baner {
   position: relative;
